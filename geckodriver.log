@@ -1,0 +1,24 @@
+1513729258811	geckodriver	INFO	geckodriver 0.19.1 (0000000000000000000000000000000000000000 2017-10-31)
+1513729258834	geckodriver	INFO	Listening on 127.0.0.1:50677
+1513729260833	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADITYA~1\\AppData\\Local\\Temp\\rust_mozprofile.av7W7j0EWw9l"
+1513729261329	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+1513729262083	Marionette	INFO	Enabled via --marionette
+1513729264470	Marionette	INFO	Listening on port 50683
+1513729264509	Marionette	WARN	TLS certificate errors will be ignored for this session
+1513729264660	Marionette	DEBUG	Register listener.js for window 4294967297
+1513729264793	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1513729265744	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1513729265745	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513729268709	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.python.org/"
+1513729268815	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.python.org/"
+pagehide" for "about:blank"
+1513728939382	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1513728939503	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=dnsNotFound&u=http%3A//www.python.org/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20www.python.org."
+[Parent 6920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 6920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9144] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9144] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11748] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

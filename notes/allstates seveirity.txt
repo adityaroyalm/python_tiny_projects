@@ -1,0 +1,24 @@
+calcuate the skewness of integers data
+clculate the describe 
+draw violin plot a combination of density and box plots ,a multiple subplots of matplotlib were drawn before that
+matplotlib is great for subplotting
+#########skew correction##
+we can also draw a pairplot iteratively by mentioning x_vars,y_vars iteratvely unlike just mentioning the dataset 
+plot countplot of categorical data in the dataset
+
+one hot encoding of categorical data
+lists of lists of categorical data in each column of the dataset
+use LabelEncoder().fit(list[listt]).transform(data.iloc[:,i])
+OneHotEncoder
+cross_validation.train_test_split
+data preparation##########
+evaluation,prediction and analysis
+linear regression
+
+
+
+
+notes------------------
+*in seaborn parameters for countplot,violinplot are x='name of column'
+* we can create lists of lsts by appending
+* we can create a 2d array from a list of arrays by column_stack

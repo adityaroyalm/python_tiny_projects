@@ -1,0 +1,7 @@
+find null values
+comparision of features via contour and correlation plots
+generate a contour plot which is a seaborn invocation of kde plot to get the general idea of data in the columns of the data set
+matplolib,sns.cubehelixpalette
+remove is used o removean element from the list
+drew a for loop of kdeplot(unable to do it)
+draw plotly graphs,3d plots and bargraphs of plotly

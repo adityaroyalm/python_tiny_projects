@@ -1,0 +1,5 @@
+with open('path','r') as csv
+csv_obj=csv.reader(csv)
+
+
+skipinitialspace=True

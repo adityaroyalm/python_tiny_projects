@@ -1,0 +1,8 @@
+summary
+changing names to lower
+to get total number of particular factors in a column of  a df use tables method
+r has excellent ways to filter data with respective to other columns so I used df$column[df$column==somevalue]
+some subsettings like df$column[df$column1==some&df$column2==some2] and create a lists of lists same like adictionary in python
+filtering and droplevels()
+summarizing and grouping
+plots draw bar plot,frequency plot
