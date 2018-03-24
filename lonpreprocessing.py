@@ -15,27 +15,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 movie_obj=pd.read_csv(r'D:\MLsoftaware_projects\movie_metadata.csv')
-
+#finding null values can be a lot easier if we just do isnull() for whole dataframe
 dictionary ={x:sum(movie_obj[x].isnull()) for x in movie_obj.columns if sum(movie_obj[x].isnull())!=0}
+#filling na values to only int columns can be lot easier filling by fillna('ffill')
 for x in movie_obj.columns:
    if isinstance(movie_obj[x],str)==False:
         movie_obj[x].fillna(0,inplace=True)
-
+#can be easily done by pd.dropna()
 k=[]
 for x in movie_obj.columns:
     if isinstance(movie_obj.ix[1,x],str):
         movie_obj.drop(x,axis=1,inplace=True)
 pd=pd.melt(movie_obj,id_vars=['duration'])
-p=ggplot(aes(x='duration',y='imdb_score'),data=movie_obj)+geom_line()
-print(p)
+
+
 ####################standardization#################################
+#standard scalar can be useful somtimes it is not useful 
 x_std=StandardScaler()
 y_trans=x_std.fit_transform(movie_obj.values)
 y_trans=pd.DataFrame(y_trans)
 Column_names=list(movie_obj.columns)
 y_trans.columns=Column_names
 #y.iloc[:,0].plot()
+#finding pairwise correlation
 correlation= y_trans.corr()
+#don't know what I tried doing here, it does'nt work I suppose
 ranked=correlation.rank(ascending=True)
 k=correlation[(correlation<-0.4) | (correlation>0.4) & (correlation!=1)]
 k.fillna(0,inplace=True)
