@@ -27,7 +27,7 @@ for x in movie_obj.columns:
         movie_obj.drop(x,axis=1,inplace=True)
 pd=pd.melt(movie_obj,id_vars=['duration'])
 p=ggplot(aes(x='duration',y='imdb_score'),data=movie_obj)+geom_line()
-print p
+print(p)
 ####################standardization#################################
 x_std=StandardScaler()
 y_trans=x_std.fit_transform(movie_obj.values)

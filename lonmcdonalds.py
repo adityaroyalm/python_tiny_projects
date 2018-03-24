@@ -8,9 +8,10 @@ Created on Thu Mar 09 15:50:04 2017
 import numpy as np
 import pandas as pd
 menu=pd.read_csv("D:/MLsoftaware_projects/mcdonalds/menu.csv")
-print menu.head(4)
-print menu.isnull().any()
-print menu.shape
+print(menu.head(4))
+#finding null values
+print(menu.isnull().any())
+print(menu.shape)
 menu.describe()
 from matplotlib import pyplot as plt
 #f,axes=plt.subplots(3,3,figsize=(10,10))
@@ -18,6 +19,7 @@ s=np.linspace(0,3,10)
 import seaborn as sns
 cols= menu.columns.tolist()
 int_cols=[]
+#isinstance will also be true for subclasses
 for i in range(len(cols)):
     if isinstance(menu.iloc[1,i],str)==False:
         int_cols.append(cols[i])
@@ -25,6 +27,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 ncol=3
 for i in range(7):
+    #cubehelixpalette is for attractive colors shading
     fig,ax=plt.subplots(nrows=1,ncols=3)
     for j in range(ncol):
         cmap=sns.cubehelix_palette(start=0.0,light=1,as_cmap=True)
@@ -35,6 +38,7 @@ for i in range(7):
 #x=menu['Cholesterol (% Daily Value)']
 #y=menu['Sodium (% Daily Value)']
 #sns.kdeplot(x,y,cmap=cmap,ax=axes[0,0])
+#import plotly,never used this
 import plotly.tools 
 import plotly 
 import matplotlib.pyplot as plt

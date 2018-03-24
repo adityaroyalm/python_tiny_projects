@@ -14,6 +14,7 @@ Created on Sat Mar  3 16:19:40 2018
 import pandas as pd
 from sklearn.metrics import accuracy_score
 import numpy as np
+#classification problem
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as  plt
@@ -26,6 +27,7 @@ df['orig_apprd_val_amt']=[np.median(df['orig_apprd_val_amt'].values) if x==0 els
 df['Tot_mthly_debt_exp']=[np.median(df['Tot_mthly_debt_exp'].values) if x==0 else x for x in df['Tot_mthly_debt_exp'].values ]
 df_new=pd.DataFrame(columns=['leaf_nodes','train_accuracy','validation_accuracy'])
 for k in range(2,10):
+    #changing the number of leaf nodes
     clf=DecisionTreeClassifier(max_leaf_nodes=k)
     clf.fit(x_train,y_train)
     predicted_train=clf.predict(x_train)
@@ -33,6 +35,7 @@ for k in range(2,10):
     accuracy_train=accuracy_score(y_train,predicted_train)
     accuracy_valid=accuracy_score(y_valid
                                   ,predicted_valid)
+    #appending observations to dataframe columns
     df_new=df_new.append({'leaf_nodes':k,'train_accuracy':accuracy_train,'validation_accuracy':accuracy_valid},ignore_index=True)
 plt.plot(df_new['leaf_nodes'],df_new['train_accuracy'],label='training')
 plt.plot(df_new['leaf_nodes'],df_new['validation_accuracy'],label='validation')

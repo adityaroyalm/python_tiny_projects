@@ -19,10 +19,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 dataa=dataset.iloc[:,116:]
 cols=dataa.columns
-print cols
+print(cols)
 import matplotlib.pyplot as plt
 import seaborn as sns
 n_cols=2
+#plotting multiple seaborn plots
 for i in range(7):
     fig,ax=plt.subplots(nrows=1,ncols=2,figsize=(6,6))
     for j in range(2):
@@ -47,10 +48,12 @@ cats=[]
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 for i in range(0,116):
+    #label encoder is useless
     label_encoder=LabelEncoder()
     label_encoder.fit(labels[i])
     feature=label_encoder.transform(dataset.iloc[:,i])
     feature=feature.reshape(dataset.shape[0],1)
+    #pd.dummy is better than onehtencoder
     onehotencoder=OneHotEncoder(sparse=False,n_values=len(labels[i]))
     feature=onehotencoder.fit_transform(feature)
     cats.append(feature)
