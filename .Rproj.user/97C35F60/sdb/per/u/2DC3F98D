@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "tot=read.csv('approval_topline.csv')\nind=read.csv('approval_polllist.csv')\ntot=tot[,-1]\nind=ind[,-1]\ntot=tot[307:nrow(tot),]\nlibrary(xts)\nlibrary(ggplot2)\ntot_ts=ggplot(tot,aes(modeldate,approve_estimate))+geom_line()+theme_minimal()\nplot(tot_ts)\n",
+    "created" : 1523577299052.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1883184725",
+    "id" : "2DC3F98D",
+    "lastKnownWriteTime" : 2484628536874007931,
+    "last_content_update" : 1523738933092,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled7"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "df=read.csv('dow_jones_index.csv')\ndf=df[df$quarter==1,]\ncomp=table(df$stock)\npar(mfrow=c(1,1))\nts.plot(df$percent_change_volume_over_last_wk,ylab='comp',type='o')\n",
+    "created" : 1524084333322.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "4228876116",
+    "id" : "3338194A",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1524089047794,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled8"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

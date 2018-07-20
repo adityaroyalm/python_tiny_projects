@@ -1,6 +1,0 @@
-X,Y
-y=X*w
-if y<0,1,-1
-deltaW=(y-Y)*X*eta
-deltaw0=
-w=w+deltaw

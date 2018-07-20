@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(tseries)\nlibrary(forecast)\ndf=read.table('data.txt',header=TRUE)\nadf.test(df$Percentage)\nts.plot(df$Percentage)\npacf(df$Percentage,main='original')\npacf(diff(df$Percentage ,1),main='lag1')\nauto.arima(df$Percentage)\n",
+    "created" : 1520980897954.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1208099314",
+    "id" : "4120C1A8",
+    "lastKnownWriteTime" : 28429436510994535,
+    "last_content_update" : 1520997164103,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled6"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

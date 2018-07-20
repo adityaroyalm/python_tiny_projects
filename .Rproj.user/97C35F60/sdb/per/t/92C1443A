@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "df=read.table('monthlytemperature.txt')\ndf_ts=ts(read.table('monthlytemperature.txt'),frequency = 12)\nlibrary('TSA')\nplot(df_ts)\nacf(df_ts)\npacf(df_ts)\npredict1=harmonic(ts(rep(1, 24), start=c(1976, 1), freq=12), 1)\nhar=harmonic(df_ts, 1)\nmodel1=arima(df_ts, xreg=har)\nplot(model1, n.ahead=18, start=c(1972, 1), newxreg=predict1, type='b', ylab='Temperature', xlab='Year')\n\ndf2=read.table('Air quality.txt')\ndf2_ts=ts(read.table('Air quality.txt'),frequency = 12)\nplot(df2_ts)\nacf(df2_ts)\npacf(df2_ts)\nplot(diff(df2_ts,lag=1))\nplot(diff(df2_ts,lag=12))\nmodel2=arima(diff(df2_ts,lag=1)*diff(df2_ts,lag=12),order=c(1,0,1))\nplot(model2, n.ahead=12,  type='b', ylab='AIr', xlab='Year')\n",
+    "created" : 1523503872277.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2495866369",
+    "id" : "92C1443A",
+    "lastKnownWriteTime" : 1523476050,
+    "last_content_update" : 1523476050,
+    "path" : "~/untitled8.r",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled8"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
